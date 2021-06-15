@@ -8,7 +8,6 @@ use App\Exception\SignInException;
 use App\Repository\MySql\UserRepository;
 use App\Repository\UserRepositoryInterface;
 use App\Request\SignInRequestDto;
-use App\Request\SignUpRequestDto;
 use App\Service\AuthService;
 use App\Service\EncoderPasswordService;
 

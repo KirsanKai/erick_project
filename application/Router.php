@@ -29,9 +29,12 @@ class Router
     private function initialRoutes(): void
     {
         $this->routes = [
+            new Route('/', 'App\Controller\IndexController'),
             new Route('/sign-in', 'App\Controller\SignInController'),
             new Route('/sign-up', 'App\Controller\SignUpController'),
-            new Route('/logout', 'App\Controller\LogoutController')
+            new Route('/logout', 'App\Controller\LogoutController'),
+            new Route('/profile', 'App\Controller\ProfileController'),
+            new Route('/study/languages', 'App\Controller\Study\LanguagesController')
         ];
     }
 

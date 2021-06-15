@@ -4,7 +4,7 @@
 namespace App\Request;
 
 
-class SignInRequestDto
+class SignInRequestDto extends RequestDto
 {
     private $login;
     private $password;
@@ -43,4 +43,6 @@ class SignInRequestDto
     {
         return $this->validateRules;
     }
+
+
 }

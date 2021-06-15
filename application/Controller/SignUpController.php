@@ -31,7 +31,16 @@ class SignUpController extends Controller
      */
     public function action()
     {
-        $request = new SignUpRequestDto($_POST['login'], $_POST['password']);
+        $request = new SignUpRequestDto(
+            $_POST['login'],
+            $_POST['password'],
+            $_POST['age'],
+            $_POST['firstName'],
+            $_POST['secondName'],
+            $_POST['patronymic'],
+            $_POST['email'],
+            $_POST['sex']
+        );
         $this->validator->validate($request);
         $this->model->action($request);
         echo json_encode(new SignUpResponseDto());

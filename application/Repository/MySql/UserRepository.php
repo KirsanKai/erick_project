@@ -28,7 +28,7 @@ class UserRepository extends DbConnection implements UserRepositoryInterface
         if ($stmt->execute()) {
             $userData = $stmt->fetch();
             if ($userData) {
-                return $this->userFactory->createUserFromDb($userData);;
+                return $this->userFactory->createFromDb($userData);;
             }
         };
         return null;
@@ -42,7 +42,7 @@ class UserRepository extends DbConnection implements UserRepositoryInterface
         if ($stmt->execute()) {
             $userData = $stmt->fetch();
             if ($userData) {
-                return $this->userFactory->createUserFromDb($userData);;
+                return $this->userFactory->createFromDb($userData);;
             }
         };
         return null;
@@ -55,12 +55,26 @@ class UserRepository extends DbConnection implements UserRepositoryInterface
 
     public function insert(User $user): bool
     {
-        $query = "INSERT INTO user (login, password) VALUES (:login, :password)";
+        $query = "INSERT INTO user (login, password, first_name, second_name, patronymic, age, email, grade, sex) VALUES (:login, :password, :firstName, :secondName, :patronymic, :age, :email, :grade, :sex)";
         $stmt = $this->connection->prepare($query);
         $login = $user->getLogin();
         $password = $user->getPassword();
+        $firstName = $user->getFirstName();
+        $secondName = $user->getSecondName();
+        $patronymic = $user->getPatronymic();
+        $age = $user->getAge();
+        $email = $user->getEmail();
+        $grade = $user->getGrade();
+        $sex = $user->getSex();
         $stmt->bindParam(':login', $login);
         $stmt->bindParam(':password', $password);
+        $stmt->bindParam(':firstName', $firstName);
+        $stmt->bindParam(':secondName', $secondName);
+        $stmt->bindParam(':patronymic', $patronymic);
+        $stmt->bindParam(':age', $age);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':grade', $grade);
+        $stmt->bindParam(':sex', $sex);
         if ($stmt->execute()) {
             return true;
         }

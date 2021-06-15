@@ -28,6 +28,11 @@ class AuthService
         return false;
     }
 
+    public function getAuthUserId(): string
+    {
+        return $this->sessionService->get('user_id');
+    }
+
     public function out(): void
     {
         $_SESSION = array();
