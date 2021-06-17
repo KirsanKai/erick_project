@@ -4,10 +4,11 @@
 namespace App\Model;
 
 
+use App\Core\Model;
 use App\Repository\MySql\UserRepository;
 use App\Service\SessionService;
 
-class IndexModel
+class IndexModel extends Model
 {
 
     private SessionService $sessionService;
@@ -15,8 +16,9 @@ class IndexModel
 
     public function __construct()
     {
+        parent::__construct();
         $this->sessionService = new SessionService();
-        $this->userRepository = new UserRepository();
+        $this->userRepository = new UserRepository($this->connection);
     }
 
     public function action()

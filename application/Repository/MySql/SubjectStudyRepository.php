@@ -6,17 +6,18 @@ namespace App\Repository\MySql;
 
 use App\Entity\SubjectStudy;
 use App\Factory\SubjectStudyFactory;
-use App\Repository\DbConnection;
 use App\Repository\SubjectStudyRepositoryInterface;
+use PDO;
 
-class SubjectStudyRepository extends DbConnection implements SubjectStudyRepositoryInterface
+class SubjectStudyRepository implements SubjectStudyRepositoryInterface
 {
 
     private SubjectStudyFactory $subjectStudyFactory;
+    private PDO $connection;
 
-    public function __construct()
+    public function __construct(PDO $connection)
     {
-        parent::__construct();
+        $this->connection = $connection;
         $this->subjectStudyFactory = new SubjectStudyFactory();
     }
 

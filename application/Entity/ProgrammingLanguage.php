@@ -4,7 +4,9 @@
 namespace App\Entity;
 
 
-class ProgrammingLanguage
+use JsonSerializable;
+
+class ProgrammingLanguage implements JsonSerializable
 {
 
     private string $id;
@@ -59,4 +61,12 @@ class ProgrammingLanguage
         $this->totalNumberLessen = $totalNumberLessen;
     }
 
+    public function jsonSerialize(): array
+    {
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'totalNumberLessen' => $this->totalNumberLessen
+        ];
+    }
 }

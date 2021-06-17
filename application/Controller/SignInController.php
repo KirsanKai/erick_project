@@ -4,15 +4,15 @@
 namespace App\Controller;
 
 
-use App\Core\Controller;
 use App\Exception\RequestValidationException;
 use App\Exception\SignInException;
 use App\Model\SignInModel;
-use App\Request\SignInRequestDto;
-use App\Response\SignInResponseDto;
+use App\Request\Request;
+use App\Request\SignInRequest;
+use App\Response\SignInResponse;
 use App\Validator\Validator;
 
-class SignInController extends Controller
+class SignInController
 {
 
     private SignInModel $model;
@@ -25,14 +25,14 @@ class SignInController extends Controller
     }
 
     /**
+     * @param SignInRequest $request
      * @throws RequestValidationException
      * @throws SignInException
      */
-    public function action()
+    public function action(SignInRequest $request)
     {
-        $request = new SignInRequestDto($_POST['login'], $_POST['password']);
         $this->validator->validate($request);
         $result = $this->model->action($request);
-        echo json_encode(new SignInResponseDto($result));
+        echo json_encode(new SignInResponse($result));
     }
 }

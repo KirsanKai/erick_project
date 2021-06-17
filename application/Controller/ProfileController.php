@@ -5,7 +5,8 @@ namespace App\Controller;
 
 
 use App\Model\ProfileModel;
-use App\Response\ProfileResponseDto;
+use App\Request\Request;
+use App\Response\ProfileResponse;
 
 class ProfileController
 {
@@ -20,7 +21,7 @@ class ProfileController
     public function action(): void
     {
         $result = $this->profileModel->action();
-        $response = new ProfileResponseDto(
+        $response = new ProfileResponse(
             $result->getLogin(),
             $result->getAge(),
             $result->getFirstName(),

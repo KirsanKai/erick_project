@@ -11,10 +11,10 @@ use App\Repository\ProgrammingLanguageRepositoryInterface;
 use App\Repository\MySql\ProgrammingLanguageRepository;
 use App\Repository\MySql\UserRepository;
 use App\Repository\UserRepositoryInterface;
-use App\Request\SignUpRequestDto;
+use App\Request\SignUpRequest;
 use App\Service\EncoderPasswordService;
 
-class SignUpModel
+class SignUpModel extends Model
 {
 
     private UserRepositoryInterface $userRepository;
@@ -23,12 +23,13 @@ class SignUpModel
 
     public function __construct()
     {
-        $this->userRepository = new UserRepository();
-        $this->languageRepository = new ProgrammingLanguageRepository();
+        parent::__construct();
+        $this->userRepository = new UserRepository($this->connection);
+        $this->languageRepository = new ProgrammingLanguageRepository($this->connection);
         $this->encoderPasswordService = new EncoderPasswordService();
     }
 
-    public function action(SignUpRequestDto $requestDto): void
+    public function action(SignUpRequest $requestDto): void
     {
         if ($this->userRepository->getByLogin($requestDto->getLogin())) {
             throw new SignUpException('User such login already exist');
@@ -42,7 +43,7 @@ class SignUpModel
         }
     }
 
-    private function setInitialUserData(User $user, SignUpRequestDto $requestDto): void
+    private function setInitialUserData(User $user, SignUpRequest $requestDto): void
     {
         $user->setLogin($requestDto->getLogin());
         $user->setFirstName($requestDto->getFirstName());

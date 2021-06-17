@@ -10,6 +10,7 @@ class IndexController
 {
 
     private IndexModel $indexModel;
+    private string $pageHTML = '/application/View/index.html';
 
     public function __construct()
     {
@@ -18,7 +19,7 @@ class IndexController
 
     public function action(): void
     {
-
+        include $_SERVER['DOCUMENT_ROOT'] . $this->pageHTML;
     }
 
 }

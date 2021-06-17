@@ -5,15 +5,17 @@ namespace App\Repository\MySql;
 
 
 use App\Entity\ProgrammingLanguage;
-use App\Repository\DbConnection;
 use App\Repository\ProgrammingLanguageRepositoryInterface;
+use PDO;
 
-class ProgrammingLanguageRepository extends DbConnection implements ProgrammingLanguageRepositoryInterface
+class ProgrammingLanguageRepository implements ProgrammingLanguageRepositoryInterface
 {
 
-    public function __construct()
+    private PDO $connection;
+
+    public function __construct(PDO $connection)
     {
-        parent::__construct();
+        $this->connection = $connection;
     }
 
     public function getLanguageById(string $id): ?ProgrammingLanguage

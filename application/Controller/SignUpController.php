@@ -9,11 +9,11 @@ use App\Core\Model;
 use App\Exception\RequestValidationException;
 use App\Exception\SignUpException;
 use App\Model\SignUpModel;
-use App\Request\SignUpRequestDto;
-use App\Response\SignUpResponseDto;
+use App\Request\SignUpRequest;
+use App\Response\SignUpResponse;
 use App\Validator\Validator;
 
-class SignUpController extends Controller
+class SignUpController
 {
 
     private SignUpModel $model;
@@ -26,23 +26,14 @@ class SignUpController extends Controller
     }
 
     /**
+     * @param SignUpRequest $request
      * @throws RequestValidationException
      * @throws SignUpException
      */
-    public function action()
+    public function action(SignUpRequest $request)
     {
-        $request = new SignUpRequestDto(
-            $_POST['login'],
-            $_POST['password'],
-            $_POST['age'],
-            $_POST['firstName'],
-            $_POST['secondName'],
-            $_POST['patronymic'],
-            $_POST['email'],
-            $_POST['sex']
-        );
         $this->validator->validate($request);
         $this->model->action($request);
-        echo json_encode(new SignUpResponseDto());
+        echo json_encode(new SignUpResponse());
     }
 }

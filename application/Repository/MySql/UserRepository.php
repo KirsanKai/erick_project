@@ -8,15 +8,17 @@ use App\Entity\User;
 use App\Factory\UserFactory;
 use App\Repository\DbConnection;
 use App\Repository\UserRepositoryInterface;
+use PDO;
 
-class UserRepository extends DbConnection implements UserRepositoryInterface
+class UserRepository implements UserRepositoryInterface
 {
 
     private UserFactory $userFactory;
+    private PDO $connection;
 
-    public function __construct()
+    public function __construct(PDO $connection)
     {
-        parent::__construct();
+        $this->connection = $connection;
         $this->userFactory = new UserFactory();
     }
 

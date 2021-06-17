@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Система обучения</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link rel="stylesheet" href="public/css/login.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="wrapper">
+                <!-- Sidebar -->
+                <div id="sidebar-wrapper" hidden="true" style="margin-top: -20px">
+                    <ul class="sidebar-nav" style="margin-left: 0">
+                        <li class="sidebar-brand">
+                            <div href="#menu-toggle" id="menu-toggle" style="margin-top: 20px; float: right">
+                                <i class="fa fa-bars" style="font-size: 20px !important" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="buttonsnav btnprofile"><i class="fa fa-user" aria-hidden="true"> </i>
+                                <span style="margin-left: 10px">Профиль</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="buttonsnav btnpractic">
+                                <i class="fa fa-play-circle-o" aria-hidden="true"> </i>
+                                <span style="margin-left: 10px">Практика</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="buttonsnav btntests">
+                                <i class="fa fa-puzzle-piece" aria-hidden="true"> </i>
+                                <span style="margin-left: 10px"> Тестирование</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="buttonsnav btnlessons">
+                                <i class="fa fa-font" aria-hidden="true"> </i>
+                                <span style="margin-left: 10px"> Теория</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="buttonsnav btninfo"><i class="fa fa-info-circle" aria-hidden="true"> </i>
+                                <span style="margin-left: 10px">Справка </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="buttonsnav btntech">
+                                <i class="fa fa-comment-o" aria-hidden="true"> </i>
+                                <span style="margin-left: 10px">Техподдержка</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /#sidebar-wrapper -->
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+                    <div class="container-fluid">
+                        <div class="contents profilecontent" hidden = "true">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="d-flex flex-column align-items-center text-center">
+                                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png"
+                                                        alt="Admin" class="rounded-circle" width="150" />
+                                                    <div class="mt-3">
+                                                        <h4>@neelmachine</h4>
+                                                        <p class="text-secondary mb-1">Разработчик</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <h6>Фамилия</h6>
+                                                    </div>
+                                                    <div class="col-sm-9 text-secondary">Насиров</div>
+                                                </div>
+                                                <hr />
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <h6>Имя</h6>
+                                                    </div>
+                                                    <div class="col-sm-9 text-secondary">Эрик</div>
+                                                </div>
+                                                <hr />
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <h6>Отчество</h6>
+                                                    </div>
+                                                    <div class="col-sm-9 text-secondary">Фанилевич</div>
+                                                </div>
+                                                <hr />
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <h6 class="mb-0">Email</h6>
+                                                    </div>
+                                                    <div class="col-sm-9 text-secondary">
+                                                        fip@jukmuh.al
+                                                    </div>
+                                                </div>
+                                                <hr />
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <h6 class="mb-0">Прогресс JS</h6>
+                                                    </div>
+                                                    <div class="progress col-sm-9">
+                                                        <div class="progress-bar" role="progressbar" style="width: 25%"
+                                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr />
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <h6 class="mb-0">Прогресс PHP</h6>
+                                                    </div>
+                                                    <div class="progress col-sm-9">
+                                                        <div class="progress-bar" role="progressbar" style="width: 65%"
+                                                            aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contents testcontent" hidden = "true">
+                            <div class="container">
+                                <div class="text-center">
+                                    <blockquote class="blockquote">
+                                        <h2>Тесты</h2>
+                                    </blockquote>
+                                </div>
+                                <ol class="list-group list-group-numbered">
+                                    <li class="list-group-item">Cras justo odio</li>
+                                    <li class="list-group-item list-group-item-dark">Cras justo odio</li>
+                                    <li class="list-group-item list-group-item-dark">Cras justo odio</li>
+                                </ol>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card" style="margin: 10px">
+                                            <img src="../../public/img/js.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">JavaScript</h5>
+                                                <p class="card-text">JavaScript — мультипарадигменный язык
+                                                    программирования. Поддерживает объектно-ориентированный,
+                                                    императивный и функциональный стили. Является реализацией
+                                                    спецификации ECMAScript.</p>
+                                                <div class="d-grid gap-2">
+                                                    <button class="btn btn-primary">Тестирование</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card" style="margin: 10px">
+                                            <img src="../../public/img/php.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Php</h5>
+                                                <p class="card-text">PHP — скриптовый язык общего назначения, интенсивно
+                                                    применяемый для разработки веб-приложений. В настоящее время
+                                                    поддерживается подавляющим большинством хостинг-провайдеров.</p>
+                                                <div class="d-grid gap-2">
+                                                    <button class="btn btn-primary">Тестирование</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contents lessons" hidden = "true">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="card-body">
+                                      <h3 class="card-title">Введение в JavaScript</h3>
+                                      <p class="card-text">
+                                        Давайте посмотрим, что такого особенного в JavaScript, чего можно достичь с его помощью и какие другие технологии хорошо с ним работают. <br>
+
+                                        <h3>Что такое JavaScript?</h3>
+                                        Изначально JavaScript был создан, чтобы «сделать веб-страницы живыми».
+                                        <br>
+                                        Программы на этом языке называются скриптами. Они могут встраиваться в HTML и выполняться автоматически при загрузке веб-страницы.
+                                        <br>
+                                        Скрипты распространяются и выполняются, как простой текст. Им не нужна специальная подготовка или компиляция для запуска. <br>
+                                        Сегодня JavaScript может выполняться не только в браузере, но и на сервере или на любом другом устройстве, которое имеет специальную программу, называющуюся «движком» JavaScript. <br>
+
+                                        У браузера есть собственный движок, который иногда называют «виртуальная машина JavaScript». <br>
+
+                                        Разные движки имеют разные «кодовые имена». Например:
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">V8 – в Chrome и Opera.</li>
+                                            <li class="list-group-item">SpiderMonkey – в Firefox.</li>
+                                            <li class="list-group-item">…Ещё есть «Trident» и «Chakra» для разных версий IE, «ChakraCore» для Microsoft Edge, <br> «Nitro» и «SquirrelFish» для Safari и т.д.</li>
+                                        </ul>
+                                    </p>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="container">
+                                <div class="text-center">
+                                    <blockquote class="blockquote">
+                                        <h2>Уроки</h2>
+                                    </blockquote>
+                                </div>
+                                <ol class="list-group list-group-numbered">
+                                    <li class="list-group-item">Cras justo odio</li>
+                                    <li class="list-group-item list-group-item-dark">Cras justo odio</li>
+                                    <li class="list-group-item list-group-item-dark">Cras justo odio</li>
+                                </ol>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card" style="margin: 10px">
+                                            <img src="../../public/img/js.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center">JavaScript</h5>
+                                                <p class="card-text">JavaScript — мультипарадигменный язык
+                                                    программирования. Поддерживает объектно-ориентированный,
+                                                    императивный и функциональный стили. Является реализацией
+                                                    спецификации ECMAScript.</p>
+                                                <div class="d-grid gap-2">
+                                                    <button class="btn btn-primary">Обучение</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card" style="margin: 10px">
+                                            <img src="../../public/img/php.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="text-center card-title">Php</h5>
+                                                <p class="card-text">PHP — скриптовый язык общего назначения, интенсивно
+                                                    применяемый для разработки веб-приложений. В настоящее время
+                                                    поддерживается подавляющим большинством хостинг-провайдеров.</p>
+                                                <div class="d-grid gap-2">
+                                                    <button class="btn btn-primary">Обучение</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contents practic" hidden = "true">
+                            <div class="container practiczadanie" hidden = "true">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Задание №1
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Special title treatment</h5>
+                                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                            Omnis sapiente ipsa consequuntur. Natus ex maiores officia recusandae earum
+                                            corporis quisquam rem consequatur, explicabo itaque, neque necessitatibus
+                                            aperiam expedita autem mollitia?</p>
+                                            <textarea class="form-control" placeholder="Напишите код сюда" id="floatingTextarea2" style="height: 200px"></textarea> <br>
+                                        <button class="btn btn-primary">Выполнить код</button>
+                                    </div>
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingOne">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                                    aria-expanded="false" aria-controls="flush-collapseOne">
+                                                    Ответ
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                                aria-labelledby="flush-headingOne"
+                                                data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Placeholder content for this accordion,
+                                                    which is intended to demonstrate the <code>.accordion-flush</code>
+                                                    class. This is the first item's accordion body.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container listzadaniy" hidden = "true">
+                                <div class="text-center">
+                                    <blockquote class="blockquote">
+                                        <h2>Практика</h2>
+                                    </blockquote>
+                                </div>
+                                <ol class="list-group list-group-numbered">
+                                    <li class="list-group-item" id='lesson_1'>Cras justo odio</li>
+                                    <li class="list-group-item list-group-item-dark">Cras justo odio</li>
+                                    <li class="list-group-item list-group-item-dark">Cras justo odio</li>
+                                </ol>
+                            </div>
+                            <div class="container language_selection">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card" style="margin: 10px">
+                                            <img src="../../public/img/js.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">JavaScript</h5>
+                                                <p class="card-text">JavaScript — мультипарадигменный язык
+                                                    программирования. Поддерживает объектно-ориентированный,
+                                                    императивный и функциональный стили. Является реализацией
+                                                    спецификации ECMAScript.</p>
+                                                <div class="d-grid gap-2">
+                                                    <button class="btn btn-primary btn_practic_js">Начать практику</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card" style="margin: 10px">
+                                            <img src="../../public/img/php.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Php</h5>
+                                                <p class="card-text">PHP — скриптовый язык общего назначения, интенсивно
+                                                    применяемый для разработки веб-приложений. В настоящее время
+                                                    поддерживается подавляющим большинством хостинг-провайдеров.</p>
+                                                <div class="d-grid gap-2">
+                                                    <button class="btn btn-primary btn_practic_php">Начать практику</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container logincontainer" >
+            <div class="frame">
+                <div class="nav">
+                    <ul class="links">
+                        <li class="signin-active"><a class="btn">Вход</a></li>
+                        <li class="signup-inactive"><a class="btn">Регистрация</a></li>
+                    </ul>
+                </div>
+                <div ng-init="checked = false">
+                    <div class="form-signin">
+                        <label for="username">Логин</label>
+                        <input class="form-styling loginusername" type="text" name="username" />
+                        <label for="password">Пароль</label>
+                        <input class="form-styling loginpassword" type="password" name="password" />
+                        <div class="btn-animate">
+                            <div style="cursor: pointer" class="btn-signin">Войти</div>
+                        </div>
+                    </div>
+
+                    <div class="form-signup">
+                        <label for="fullname">Ваше ФИО</label>
+                        <input class="form-styling signupfio" type="text" name="fullname" placeholder="" />
+                        <label for="fullname">Ваш возраст</label>
+                        <input class="form-styling signupage" type="text" name="fullname" placeholder="" />
+                        <label for="sex">Ваш пол</label>
+                        <select class="form-styling" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="male">Мужской</option>
+                            <option value="female">Женский</option>
+                        </select>
+                        <label for="email">Ваш Email</label>
+                        <input class="form-styling signupemail" type="text" name="email" placeholder="" />
+                        <label for="password">Пароль</label>
+                        <input class="form-styling signuppassword" type="password" name="password" placeholder="" />
+                        <label for="confirmpassword">Подтвердите пароль</label>
+                        <input class="form-styling signuppasswordconfirm" type="password" name="confirmpassword"
+                            placeholder="" />
+                        <a class="btn-signup">Зарегистрироватся</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+        </script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="public/js/login.js"></script>
+        <script src="public/js/main.js"></script>
+</body>
+
+</html>
